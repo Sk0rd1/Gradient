@@ -21,21 +21,21 @@ namespace GradientC_
             Proxy.CheckLocalIP();
 
             Console.Clear();
-            Console.WriteLine(CenterText("====================================================="));
+            Console.WriteLine(LineText("="));
             Console.WriteLine(CenterText("                 Gradient Auto Bot                 "));
-            Console.WriteLine(CenterText("-----------------------------------------------------"));
+            Console.WriteLine(LineText("-"));
             Console.WriteLine(CenterText("          https://t.me/m_1_sh_a                    "));
-            Console.WriteLine(CenterText("-----------------------------------------------------"));
+            Console.WriteLine(LineText("-"));
             Console.WriteLine(CenterText("Solana: BJWo4wpiSVy6FdcpWyvfW6VXCJJstGq1N616bPdysfd5"));
             Console.WriteLine(CenterText("Etherium: 0x7b692583cc51220C86742C333D98714C07e1B2e1"));
-            Console.WriteLine(CenterText("====================================================="));
+            Console.WriteLine(LineText("="));
             Console.WriteLine();
             Console.WriteLine(" Input: login/signup/exit");
             Console.WriteLine();
 
-            string extensionUrl = "URL_завантаження_extension.crx";
-            string savePath = "/шлях/до/розширення/extension.crx";
-            bool isDownloaded = DownloadExtensionAsync(extensionUrl, savePath).Result;
+            //string extensionUrl = "URL_завантаження_extension.crx";
+            //string savePath = "/шлях/до/розширення/extension.crx";Gradient/Gradient/GradientC#/bin/Debug/net8.0/caacbgbklghmpodbdafajbgdnegacfmo.crx
+            //bool isDownloaded = DownloadExtensionAsync(extensionUrl, savePath).Result;
 
             await Profile.RemoveAnotherProfiles();
 
@@ -85,6 +85,20 @@ namespace GradientC_
             int consoleWidth = Console.WindowWidth;
             int padding = (consoleWidth - text.Length) / 2;
             return text.PadLeft(text.Length + padding);
+        }
+
+        static string LineText(string symbol)
+        {
+            int consoleWidth = Console.WindowWidth;
+
+            string result = String.Empty;
+
+            for (int i = 0; i < consoleWidth; i++)
+            {
+                result += symbol;
+            }
+
+            return result;
         }
 
         public static async Task<bool> DownloadExtensionAsync(string extensionUrl, string savePath)

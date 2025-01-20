@@ -24,3 +24,4 @@ E:\Farm\GradientC#\GradientC#\bin\Debug\net8.0\WebDriver.Support.dll
 E:\Farm\GradientC#\GradientC#\bin\Debug\net8.0\Selenium.WebDriver.UndetectedChromeDriver.dll
 E:\Farm\GradientC#\GradientC#\bin\Debug\net8.0\Selenium.Extensions.dll
 E:\Farm\GradientC#\GradientC#\bin\Debug\net8.0\Sl.Selenium.Extensions.Chrome.dll
+E:\Farm\GradientC#\GradientC#\obj\Debug\net8.0\GradientC#.sourcelink.json

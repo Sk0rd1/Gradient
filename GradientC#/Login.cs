@@ -16,13 +16,13 @@ namespace GradientC_
     {
         private string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
 
-        public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 10)
+        public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 1000)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
             wait.Until(driver => ((IJavaScriptExecutor)driver)
                 .ExecuteScript("return document.readyState").Equals("complete"));
 
-            await Task.Delay(4000);
+            await Task.Delay(30000);
         }
 
         public async Task<bool> Start(ProxyCredentials proxyCredentials, AccountCredentials accountCredentials)

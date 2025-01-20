@@ -33,6 +33,10 @@ namespace GradientC_
             Console.WriteLine(" Input: login/signup/exit");
             Console.WriteLine();
 
+            string extensionUrl = "URL_завантаження_extension.crx";
+            string savePath = "/шлях/до/розширення/extension.crx";
+            bool isDownloaded = DownloadExtensionAsync(extensionUrl, savePath).Result;
+
             await Profile.RemoveAnotherProfiles();
 
             while (true)
@@ -81,6 +85,38 @@ namespace GradientC_
             int consoleWidth = Console.WindowWidth;
             int padding = (consoleWidth - text.Length) / 2;
             return text.PadLeft(text.Length + padding);
+        }
+
+        public static async Task<bool> DownloadExtensionAsync(string extensionUrl, string savePath)
+        {
+            if (File.Exists(savePath))
+            {
+                Console.WriteLine($"The extension already exists.");
+                return true;
+            }
+
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(extensionUrl, HttpCompletionOption.ResponseHeadersRead);
+                    response.EnsureSuccessStatusCode();
+
+                    using (Stream contentStream = await response.Content.ReadAsStreamAsync(),
+                                 fileStream = new FileStream(savePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        await contentStream.CopyToAsync(fileStream);
+                    }
+
+                    Console.WriteLine("Extension successfully loaded.");
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error loading extension: {ex.Message}.");
+                    return false;
+                }
+            }
         }
     }
 }

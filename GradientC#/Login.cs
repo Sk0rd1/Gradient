@@ -40,7 +40,7 @@ namespace GradientC_
             Directory.CreateDirectory(newProfilePath);
 
             // Копіюємо розширення з профілю за замовчуванням
-            string defaultExtensionsPath = Path.Combine(userDataPath, "Default\\Extensions");
+            /*string defaultExtensionsPath = Path.Combine(userDataPath, "Default\\Extensions");
             string newExtensionsPath = Path.Combine(newProfilePath, "Extensions");
 
             if (Directory.Exists(defaultExtensionsPath))
@@ -62,7 +62,7 @@ namespace GradientC_
                 {
                     Console.WriteLine($"ERROR: {ex.Message}");
                 }
-            }
+            }*/
 
             var options = new ChromeOptions();
 
@@ -79,7 +79,7 @@ namespace GradientC_
             options.AddArgument("--no-default-browser-check");
             options.AddArgument("--ignore-certificate-errors");
             options.AddArgument("--allow-insecure-localhost");
-            options.AddArguments("--load-extension=C:\\Users\\ipz21\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\caacbgbklghmpodbdafajbgdnegacfmo\\1.0.21_0");
+            //options.AddArguments("--load-extension=C:\\Users\\ipz21\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\caacbgbklghmpodbdafajbgdnegacfmo\\1.0.21_0");
 
             options.AddArgument("--disable-gpu");
             options.AddArgument("--disable-3d-apis");

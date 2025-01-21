@@ -24,8 +24,10 @@ namespace GradientC_
                 var match = Regex.Match(proxyString, @"http://([^:]+):([^@]+)@([^:]+):(\d+)");
                 if (!match.Success)
                 {
-                    throw new FormatException("Неправильний формат проксi");
+                    throw new FormatException("Invalid proxy format");
                 }
+
+                Console.WriteLine("match.Groups[1].Value " + match.Groups[1].Value);
 
                 return new ProxyCredentials
                 {
@@ -38,7 +40,7 @@ namespace GradientC_
             }
             catch (Exception ex)
             {
-                throw new FormatException($"Помилка парсингу проксi: {ex.Message}");
+                throw new FormatException($"Proxy parsing error: {ex.Message}");
             }
         }
     }
@@ -147,7 +149,7 @@ namespace GradientC_
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Помилка завантаження проксі: {ex.Message}");
+                Console.WriteLine($"Proxy loading error: {ex.Message}");
                 listProxies = new List<ProxyCredentials>();
             }
 

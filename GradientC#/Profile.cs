@@ -10,7 +10,8 @@ namespace GradientC_
     {
         public static async Task RemoveAnotherProfiles()
         {
-            string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
+            //string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
+            string userDataPath = "/home/ubuntu/.config/google-chrome/User Data";
 
             var directories = Directory.GetDirectories(userDataPath);
 

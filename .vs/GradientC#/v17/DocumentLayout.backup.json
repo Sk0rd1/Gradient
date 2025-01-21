@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "E:\\Farm\\GradientC#\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\accountengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\accountengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,18 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\accountengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\accountengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +34,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Profile.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Profile.cs",
               "RelativeDocumentMoniker": "GradientC#\\Profile.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Profile.cs",
               "RelativeToolTip": "GradientC#\\Profile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwAwAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:22:12.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T14:22:12.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Signup.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Signup.cs",
               "RelativeDocumentMoniker": "GradientC#\\Signup.cs",
@@ -59,12 +58,11 @@
               "RelativeToolTip": "GradientC#\\Signup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T11:11:53.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T11:11:53.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Login.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Login.cs",
               "RelativeDocumentMoniker": "GradientC#\\Login.cs",
@@ -72,12 +70,11 @@
               "RelativeToolTip": "GradientC#\\Login.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAnwBEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T19:11:24.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T19:11:24.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Proxy.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Proxy.cs",
               "RelativeDocumentMoniker": "GradientC#\\Proxy.cs",
@@ -85,33 +82,32 @@
               "RelativeToolTip": "GradientC#\\Proxy.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T19:07:16.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T19:07:16.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "AccountEngine.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\AccountEngine.cs",
               "RelativeDocumentMoniker": "GradientC#\\AccountEngine.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\AccountEngine.cs",
               "RelativeToolTip": "GradientC#\\AccountEngine.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAA0BAACGAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowB0AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T10:18:51.697Z"
+              "WhenOpened": "2024-12-29T10:18:51.697Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Program.cs",
               "RelativeDocumentMoniker": "GradientC#\\Program.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Program.cs",
               "RelativeToolTip": "GradientC#\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAwFgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:07:04.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T21:07:04.205Z"
             }
           ]
         }

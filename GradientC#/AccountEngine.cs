@@ -27,8 +27,6 @@ namespace GradientC_
                     throw new FormatException("Invalid proxy format");
                 }
 
-                Console.WriteLine("match.Groups[1].Value " + match.Groups[1].Value);
-
                 return new ProxyCredentials
                 {
                     Username = match.Groups[1].Value,

@@ -14,8 +14,8 @@ namespace GradientC_
 {
     internal class Login
     {
-        //string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
-        private string userDataPath = "/home/ubuntu/.config/google-chrome/User Data";
+        string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
+        //private string userDataPath = "/home/ubuntu/.config/google-chrome/User Data";
 
         public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 1000)
         {

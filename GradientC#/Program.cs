@@ -32,23 +32,15 @@ namespace GradientC_
             Console.WriteLine(" Input: login/signup/exit");
             Console.WriteLine();
 
-            string extensionId = "caacbgbklghmpodbdafajbgdnegacfmo";
-            string crxUrl = $"https://clients2.google.com/service/update2/crx?response=redirect&prodversion=98.0.4758.102&acceptformat=crx2,crx3&x=id%3D{extensionId}%26uc&nacl_arch=x86-64";
-            string extensionFilename = "app.crx";
+            //string extensionId = "caacbgbklghmpodbdafajbgdnegacfmo";
+            //string crxUrl = $"https://clients2.google.com/service/update2/crx?response=redirect&prodversion=98.0.4758.102&acceptformat=crx2,crx3&x=id%3D{extensionId}%26uc&nacl_arch=x86-64";
+            //string extensionFilename = "app.crx";
             
-            Console.WriteLine(1);
-
-            await DownloadExtension(crxUrl, extensionFilename);
-            
-            Console.WriteLine(2);
+            //await DownloadExtension(crxUrl, extensionFilename);
 
             await Proxy.CheckLocalIP();
 
-            Console.WriteLine(3);
-
             await Profile.RemoveAnotherProfiles();
-
-            Console.WriteLine(4);
 
             while (true)
             {

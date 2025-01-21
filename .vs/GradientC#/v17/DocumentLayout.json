@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "E:\\Farm\\GradientC#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|solutionrelative:gradientc#\\proxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50E6749E-4281-4A8B-BE03-92B613E7E7F8}|GradientC#\\GradientC#.csproj|e:\\farm\\gradientc#\\gradientc#\\accountengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,31 +34,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Profile.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Profile.cs",
               "RelativeDocumentMoniker": "GradientC#\\Profile.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Profile.cs",
               "RelativeToolTip": "GradientC#\\Profile.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:22:12.441Z"
+              "WhenOpened": "2025-01-14T14:22:12.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Signup.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Signup.cs",
               "RelativeDocumentMoniker": "GradientC#\\Signup.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Signup.cs",
               "RelativeToolTip": "GradientC#\\Signup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T11:11:53.081Z"
+              "WhenOpened": "2025-01-14T11:11:53.081Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,21 +70,23 @@
               "RelativeDocumentMoniker": "GradientC#\\Login.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Login.cs",
               "RelativeToolTip": "GradientC#\\Login.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAnwBEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAnwBEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T19:11:24.701Z"
+              "WhenOpened": "2024-12-28T19:11:24.701Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Proxy.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Proxy.cs",
               "RelativeDocumentMoniker": "GradientC#\\Proxy.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Proxy.cs",
               "RelativeToolTip": "GradientC#\\Proxy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T19:07:16.312Z"
+              "WhenOpened": "2024-12-28T19:07:16.312Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -98,13 +102,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Farm\\GradientC#\\GradientC#\\Program.cs",
               "RelativeDocumentMoniker": "GradientC#\\Program.cs",
               "ToolTip": "E:\\Farm\\GradientC#\\GradientC#\\Program.cs",
               "RelativeToolTip": "GradientC#\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T21:07:04.205Z",
               "EditorCaption": ""

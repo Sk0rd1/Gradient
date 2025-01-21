@@ -18,7 +18,6 @@ namespace GradientC_
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
 
-            Proxy.CheckLocalIP();
 
             Console.Clear();
             Console.WriteLine(LineText("="));
@@ -33,9 +32,13 @@ namespace GradientC_
             Console.WriteLine(" Input: login/signup/exit");
             Console.WriteLine();
 
-            //string extensionUrl = "URL_завантаження_extension.crx";
-            //string savePath = "/шлях/до/розширення/extension.crx";Gradient/Gradient/GradientC#/bin/Debug/net8.0/caacbgbklghmpodbdafajbgdnegacfmo.crx
-            //bool isDownloaded = DownloadExtensionAsync(extensionUrl, savePath).Result;
+            string extensionId = "caacbgbklghmpodbdafajbgdnegacfmo";
+            string crxUrl = $"https://clients2.google.com/service/update2/crx?response=redirect&prodversion=98.0.4758.102&acceptformat=crx2,crx3&x=id%3D{extensionId}%26uc&nacl_arch=x86-64";
+            string extensionFilename = "app.crx";
+
+            await DownloadExtension(crxUrl, extensionFilename);
+
+            await Proxy.CheckLocalIP();
 
             await Profile.RemoveAnotherProfiles();
 
@@ -62,6 +65,23 @@ namespace GradientC_
 
         }
 
+        private static async Task DownloadExtension(string url, string filename)
+        {
+            using var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsByteArrayAsync();
+                File.WriteAllBytes(filename, content);
+                Console.WriteLine("Extension downloaded successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"Failed to download extension: {response.StatusCode}");
+                throw new Exception("Failed to download extension.");
+            }
+        }
         static async Task LoginProcess()
         {
             Console.WriteLine(" => Login...");

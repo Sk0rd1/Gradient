@@ -29,6 +29,8 @@ namespace GradientC_
         {
             Console.WriteLine("SignUp: " + accountCredentials.Email);
 
+            referalLink = "https://app.gradient.network/signup?code=PDHNCI";
+
             // Отримуємо шлях до профілю Chrome поточного користувача
             string defaultProfilePath = Path.Combine(userDataPath, "Default");
 

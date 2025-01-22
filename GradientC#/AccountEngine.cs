@@ -107,8 +107,8 @@ namespace GradientC_
             await LoadProxiesFromFile();
             await LoadAccountsFromFile();
 
-            if(isSignUp)
-                await LoadReferalLinkFromFile();
+            /*if(isSignUp)
+                await LoadReferalLinkFromFile();*/
         }
 
         private async Task LoadReferalLinkFromFile()

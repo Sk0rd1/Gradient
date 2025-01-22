@@ -212,6 +212,23 @@ namespace GradientC_
 
         public async Task StartLogin()
         {
+            string filePath = "extension.txt";
+
+            string extensionPath = String.Empty;
+
+            try
+            {
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    extensionPath = reader.ReadLine()?.Trim();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error in extension.txt: " + ex.Message);
+                return;
+            }
+
             Login login = new Login();
 
             int numOfExtensions = Math.Min(MAX_PROXIES_PER_ACCOUNT * listAccounts.Count, listProxies.Count);
@@ -224,13 +241,13 @@ namespace GradientC_
             {
                 if (i == 0)
                 {
-                    tasks.Add(Task.Run(async () => await login.Start(listProxies[0], listAccounts[0])));
+                    tasks.Add(Task.Run(async () => await login.Start(listProxies[0], listAccounts[0], extensionPath)));
                 }
                 else
                 {
                     int proxyIndex = i;
                     int accountIndex = i / MAX_PROXIES_PER_ACCOUNT;
-                    tasks.Add(Task.Run(async () => await login.Start(listProxies[proxyIndex], listAccounts[accountIndex])));
+                    tasks.Add(Task.Run(async () => await login.Start(listProxies[proxyIndex], listAccounts[accountIndex], extensionPath)));
                 }
             }
 

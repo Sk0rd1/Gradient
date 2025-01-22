@@ -17,18 +17,18 @@ namespace GradientC_
         string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
         //private string userDataPath = "/home/ubuntu/.config/google-chrome/User Data";
 
-        public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 1000)
+        public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 100)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
             wait.Until(driver => ((IJavaScriptExecutor)driver)
                 .ExecuteScript("return document.readyState").Equals("complete"));
 
-            await Task.Delay(30000);
+            await Task.Delay(10000);
         }
 
-        public async Task<bool> Start(ProxyCredentials proxyCredentials, AccountCredentials accountCredentials)
+        public async Task<bool> Start(ProxyCredentials proxyCredentials, AccountCredentials accountCredentials, string extensionPath)
         {
-            Console.WriteLine(" # Запуск браузера...");
+            Console.WriteLine(" # Launching the browser...");
 
             // Отримуємо шлях до профілю Chrome поточного користувача
             string defaultProfilePath = Path.Combine(userDataPath, "Default");
@@ -81,6 +81,7 @@ namespace GradientC_
             options.AddArgument("--ignore-certificate-errors");
             options.AddArgument("--allow-insecure-localhost");
             //options.AddArguments("--load-extension=C:\\Users\\ipz21\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\caacbgbklghmpodbdafajbgdnegacfmo\\1.0.21_0");
+            options.AddArguments("--load-extension=" + extensionPath);
 
             options.AddArgument("--disable-gpu");
             options.AddArgument("--disable-3d-apis");

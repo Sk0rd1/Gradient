@@ -212,20 +212,31 @@ namespace GradientC_
 
         public async Task StartLogin()
         {
-            string filePath = "extension.txt";
-
+            string baseDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data\\Default\\Extensions\\caacbgbklghmpodbdafajbgdnegacfmo\\");
             string extensionPath = String.Empty;
 
-            try
+            var subDirectories = Directory.GetDirectories(baseDirectory);
+
+            if (subDirectories.Length == 0)
             {
-                using (StreamReader reader = new StreamReader(filePath))
-                {
-                    extensionPath = reader.ReadLine()?.Trim();
-                }
+                Console.WriteLine("No subdirectories found(extension).");
+                return;
             }
-            catch (Exception ex)
+
+            // Знайти папку з найбільшою версією
+            var maxVersionDirectory = subDirectories
+                .Select(Path.GetFileName)
+                .OrderByDescending(version => Version.TryParse(version, out var parsedVersion) ? parsedVersion : new Version(0, 0))
+                .FirstOrDefault();
+
+            if (maxVersionDirectory != null)
             {
-                Console.WriteLine("Error in extension.txt: " + ex.Message);
+                extensionPath = Path.Combine(baseDirectory, maxVersionDirectory);
+                Console.WriteLine($"The directory with the highest extension version is: {extensionPath}");
+            }
+            else
+            {
+                Console.WriteLine("Could not determine the directory with the highest extension version.");
                 return;
             }
 

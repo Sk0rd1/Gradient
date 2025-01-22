@@ -102,7 +102,7 @@ namespace GradientC_
             options.AddUserProfilePreference("profile.default_content_settings.webgl", 2);
 
 
-            options.AddArguments("headless");
+            //options.AddArguments("headless");
 
             IWebDriver driver = new ChromeDriver(service, options);
 

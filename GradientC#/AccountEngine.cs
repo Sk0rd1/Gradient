@@ -244,7 +244,8 @@ namespace GradientC_
 
             int numOfExtensions = Math.Min(MAX_PROXIES_PER_ACCOUNT * listAccounts.Count, listProxies.Count);
 
-            List<Task<bool>> tasks = new List<Task<bool>>();
+            //List<Task<bool>> tasks = new List<Task<bool>>();
+            List<bool> tasks = new List<bool>();
             List<bool> results = new List<bool>();
 
             //запускаємо одночасно вхід в акаунти
@@ -252,21 +253,23 @@ namespace GradientC_
             {
                 if (i == 0)
                 {
-                    tasks.Add(Task.Run(async () => await login.Start(listProxies[0], listAccounts[0], extensionPath)));
+                    //tasks.Add(Task.Run(async () => await login.Start(listProxies[0], listAccounts[0], extensionPath)));
+                    tasks.Add(await login.Start(listProxies[0], listAccounts[0], extensionPath));
                 }
                 else
                 {
                     int proxyIndex = i;
                     int accountIndex = i / MAX_PROXIES_PER_ACCOUNT;
-                    tasks.Add(Task.Run(async () => await login.Start(listProxies[proxyIndex], listAccounts[accountIndex], extensionPath)));
+                    //tasks.Add(Task.Run(async () => await login.Start(listProxies[proxyIndex], listAccounts[accountIndex], extensionPath)));
+                    tasks.Add(await login.Start(listProxies[proxyIndex], listAccounts[accountIndex], extensionPath));
                 }
             }
 
-            await Task.WhenAll(tasks);
+            //await Task.WhenAll(tasks);
 
             foreach (var task in tasks)
             {
-                results.Add(task.Result);
+                results.Add(task);
             }
 
             int countTrue = results.Count(result => result);

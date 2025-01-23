@@ -1,6 +1,1 @@
-﻿http://yioppmcaiipwatd112620-zone-resi-region-de-session-VJ2W3Fvm-sessTime-86400:sdtfhjsedz@45.43.62.180:16666
-http://yioppmcaiipwatd112620-zone-resi-region-de-session-ACxJE2m9-sessTime-86400:sdtfhjsedz@45.43.62.180:16666
-http://yioppmcaiipwatd112620-zone-resi-region-de-session-h1AkPNWE-sessTime-86400:sdtfhjsedz@45.43.62.180:16666
-http://yioppmcaiipwatd112620-zone-resi-region-de-session-s8cw1iaq-sessTime-86400:sdtfhjsedz@45.43.62.180:16666
-http://yioppmcaiipwatd112620-zone-resi-region-de-session-mZIzyu8h-sessTime-86400:sdtfhjsedz@45.43.62.180:16666
-http://yioppmcaiipwatd112620-zone-resi-region-de-session-t1f3JNiE-sessTime-86400:sdtfhjsedz@45.43.62.180:16666
+﻿http://login:password@ip:port

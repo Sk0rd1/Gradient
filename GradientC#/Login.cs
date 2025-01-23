@@ -189,6 +189,7 @@ namespace GradientC_
                     }
                 }
 
+                Console.WriteLine("Login successful");
                 //allWindows = driver.WindowHandles;
                 //driver.SwitchTo().Window(allWindows.Last());
             }

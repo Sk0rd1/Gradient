@@ -74,7 +74,7 @@ namespace GradientC_
     internal class AccountEngine
     {
         //значення для кількості proxy виділених на один акаунт
-        private const int MAX_PROXIES_PER_ACCOUNT = 5;
+        private int MAX_PROXIES_PER_ACCOUNT = 5;
         private string proxyFilePath;
         private string accountsFilePath;
         private string referalLinkPath;
@@ -83,8 +83,9 @@ namespace GradientC_
         private List<AccountCredentials> listAccounts;
         private readonly System.Timers.Timer checkTimer;
 
-        public AccountEngine(string proxyFilePath, string accountsFilePath)
+        public AccountEngine(string proxyFilePath, string accountsFilePath, int max_proxies_per_account)
         {
+            MAX_PROXIES_PER_ACCOUNT = max_proxies_per_account;
             this.proxyFilePath = proxyFilePath;
             this.accountsFilePath = accountsFilePath;
             listProxies = new List<ProxyCredentials>();

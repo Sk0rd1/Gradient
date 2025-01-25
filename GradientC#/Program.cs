@@ -28,8 +28,8 @@ namespace GradientC_
             Console.WriteLine(CenterText("Solana: BJWo4wpiSVy6FdcpWyvfW6VXCJJstGq1N616bPdysfd5"));
             Console.WriteLine(CenterText("Etherium: 0x7b692583cc51220C86742C333D98714C07e1B2e1"));
             Console.WriteLine(LineText("="));
-            Console.WriteLine();
-            Console.WriteLine(" Input: login/signup/exit");
+            Console.WriteLine(" Version: 1.9");
+            Console.WriteLine(LineText("="));
             Console.WriteLine();
 
             //string extensionId = "caacbgbklghmpodbdafajbgdnegacfmo";
@@ -40,7 +40,17 @@ namespace GradientC_
 
             await Proxy.CheckLocalIP();
 
-            await Profile.RemoveAnotherProfiles();
+            int max_proxies_per_account = 5;
+
+            Console.WriteLine(" Input number proxy nodes per account: ");
+            max_proxies_per_account = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(" Delete previous accounts?(Y/n): ");
+
+            if(Console.ReadLine() == "Y")
+                await Profile.RemoveAnotherProfiles();
+
+            Console.WriteLine(" Input: login/signup/exit");
 
             while (true)
             {
@@ -49,7 +59,7 @@ namespace GradientC_
                 switch (input.ToLower())
                 {
                     case "login":
-                        _ = LoginProcess();
+                        _ = LoginProcess(max_proxies_per_account);
                         break;
                     case "signup":
                         _ = SignupProcess();
@@ -82,11 +92,11 @@ namespace GradientC_
                 throw new Exception("Failed to download extension.");
             }
         }
-        static async Task LoginProcess()
+        static async Task LoginProcess(int max_proxies_per_account)
         {
             Console.WriteLine(" => Login...");
 
-            var accountEngine = new AccountEngine("proxies.txt", "accounts.txt");
+            var accountEngine = new AccountEngine("proxies.txt", "accounts.txt", max_proxies_per_account);
             await accountEngine.Initialize(false);
             await accountEngine.StartLogin();
         }

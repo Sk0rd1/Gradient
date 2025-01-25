@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GradientC#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de0e94d63c61a9e42d86dbbdbe015a5a1124a8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2dc0ef140754803397dd0533b2cd15ce26dd5246")]
 [assembly: System.Reflection.AssemblyProductAttribute("GradientC#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GradientC#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

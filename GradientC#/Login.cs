@@ -196,11 +196,13 @@ namespace GradientC_
             catch (NoSuchWindowException ex)
             {
                 Console.WriteLine($"Window not found: {ex.Message} \n Email: " + accountCredentials.Email);
+                driver.Quit();
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"ERROR: {ex.Message} \n Email: " + accountCredentials.Email);
+                Console.WriteLine($"ERROR: {ex.Message} \n Email: " + accountCredentials.Email + "\n" + proxyCredentials.OriginalString);
+                driver.Quit();
                 return false;
             }
 

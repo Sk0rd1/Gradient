@@ -17,13 +17,42 @@ namespace GradientC_
         string userDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google\\Chrome\\User Data");
         //private string userDataPath = "/home/ubuntu/.config/google-chrome/User Data";
 
-        public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 100)
+        /*public async Task WaitForPageLoad(IWebDriver driver, int timeoutSeconds = 100)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
             wait.Until(driver => ((IJavaScriptExecutor)driver)
                 .ExecuteScript("return document.readyState").Equals("complete"));
 
             await Task.Delay(100000);
+        }*/
+
+        public async Task<bool> WaitForElement(IWebDriver driver, string xpath, int timeoutSeconds = 300, int checkInterval = 5)
+        {
+            int attempts = timeoutSeconds / checkInterval;
+
+            for (int i = 0; i < attempts; i++)
+            {
+                try
+                {
+                    var element = driver.FindElement(By.XPath(xpath));
+                    if (element != null && element.Displayed)
+                    {
+                        return true;
+                    }
+                }
+                catch (NoSuchElementException)
+                {
+                    // Element not found yet
+                }
+                catch (StaleElementReferenceException)
+                {
+                    // Element was found but is no longer valid
+                }
+
+                await Task.Delay(checkInterval * 1000);
+            }
+
+            return false;
         }
 
         public async Task<bool> Start(ProxyCredentials proxyCredentials, AccountCredentials accountCredentials, string extensionPath)
@@ -102,7 +131,7 @@ namespace GradientC_
             options.AddUserProfilePreference("profile.default_content_settings.webgl", 2);
 
 
-            options.AddArguments("headless");
+            //options.AddArguments("headless");
 
             IWebDriver driver = new ChromeDriver(service, options);
 
@@ -137,7 +166,12 @@ namespace GradientC_
 
                 allWindows = driver.WindowHandles;
                 driver.SwitchTo().Window(allWindows[0]);
-                await WaitForPageLoad(driver);
+                
+                string loginXPath = "/html/body/div[1]/div[2]/div/div/div/div[2]/div[1]/input";
+                if (!await WaitForElement(driver, loginXPath))
+                {
+                    throw new TimeoutException("Login input field did not appear within timeout period");
+                }
 
                 IWebElement loginInput = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div/div/div[2]/div[1]/input"));
 
@@ -153,14 +187,12 @@ namespace GradientC_
 
                 loginButton.Click();
 
-                await WaitForPageLoad(driver);
-
                 await Task.Delay(4000);
 
                 driver.Navigate().GoToUrl("chrome-extension://caacbgbklghmpodbdafajbgdnegacfmo/popup.html");
                 //((IJavaScriptExecutor)driver).ExecuteScript("window.open('chrome-extension://caacbgbklghmpodbdafajbgdnegacfmo/popup.html');");
 
-                await WaitForPageLoad(driver);
+                await Task.Delay(4000);
 
                 driver.SwitchTo().Window(driver.WindowHandles.Last());
                 string pageSource = driver.PageSource;

@@ -23,7 +23,7 @@ namespace GradientC_
             wait.Until(driver => ((IJavaScriptExecutor)driver)
                 .ExecuteScript("return document.readyState").Equals("complete"));
 
-            await Task.Delay(10000);
+            await Task.Delay(100000);
         }
 
         public async Task<bool> Start(ProxyCredentials proxyCredentials, AccountCredentials accountCredentials, string extensionPath)

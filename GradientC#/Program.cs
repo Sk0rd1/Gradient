@@ -28,7 +28,7 @@ namespace GradientC_
             Console.WriteLine(CenterText("Solana: BJWo4wpiSVy6FdcpWyvfW6VXCJJstGq1N616bPdysfd5"));
             Console.WriteLine(CenterText("Etherium: 0x7b692583cc51220C86742C333D98714C07e1B2e1"));
             Console.WriteLine(LineText("="));
-            Console.WriteLine(" Version: 2.0");
+            Console.WriteLine("  Version: 2.0");
             Console.WriteLine(LineText("="));
             Console.WriteLine();
 

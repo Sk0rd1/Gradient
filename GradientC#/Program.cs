@@ -14,6 +14,9 @@ namespace GradientC_
 {
     class Program
     {
+        static public int TimeToRequest { get; private set; } = 300;
+        static public int CheckInterval { get; private set; } = 5;
+
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
@@ -28,7 +31,7 @@ namespace GradientC_
             Console.WriteLine(CenterText("Solana: BJWo4wpiSVy6FdcpWyvfW6VXCJJstGq1N616bPdysfd5"));
             Console.WriteLine(CenterText("Etherium: 0x7b692583cc51220C86742C333D98714C07e1B2e1"));
             Console.WriteLine(LineText("="));
-            Console.WriteLine("  Version: 2.0");
+            Console.WriteLine("  Version: 2.1");
             Console.WriteLine(LineText("="));
             Console.WriteLine();
 
@@ -49,6 +52,12 @@ namespace GradientC_
 
             if(Console.ReadLine() == "Y")
                 await Profile.RemoveAnotherProfiles();
+
+            Console.WriteLine(" Enter a value for the time to wait for a response from the website(default 300): ");
+            TimeToRequest = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(" Enter a value for the page status check period(default 5): ");
+            CheckInterval = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(" Input: login/signup/exit");
 

@@ -26,8 +26,11 @@ namespace GradientC_
             await Task.Delay(100000);
         }*/
 
-        public async Task<bool> WaitForElement(IWebDriver driver, string xpath, int timeoutSeconds = 300, int checkInterval = 5)
+        public async Task<bool> WaitForElement(IWebDriver driver, string xpath)
         {
+            int timeoutSeconds = Program.TimeToRequest;
+            int checkInterval = Program.CheckInterval;
+
             int attempts = timeoutSeconds / checkInterval;
 
             for (int i = 0; i < attempts; i++)
